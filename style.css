@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height:100%;
+}
+body{
+    margin:0;
+    background: rgb(56,97,156);
+    background: radial-gradient(circle, rgba(56,97,156,1) 0%, rgba(50,69,99,1) 63%, rgba(44,45,50,1) 100%);
+    text-align: center;
+    font-family:sans-serif;
+    padding:0 30px
+}
+h1{
+    margin-top:100px;
+    margin-bottom:25px;
+    font-size:150px;
+    font-family:'Chonburi', sans-serif;
+    color:white;
+
+}
+a{
+    text-decoration: none;
+}
+#clock {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}
+body{
+    text-align:center
+}
+
+/*
+=================================================
+SEARCH
+=================================================
+*/
+form{
+    width:100%;
+    max-width:600px;
+    margin:0 auto;
+ }
+ input{
+    width:100%;
+    font-size:32px;
+    margin:5px 0;
+    border:none;
+    padding:10px;
+    outline:none;
+    display:inline-block;
+ }
+ .search-bar{
+    width:80%;
+ }
+ .submit-button{
+    width:15%;
+    background:#000;
+    color:#FFF;
+ }
+ 
+ 
