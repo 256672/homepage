@@ -6,8 +6,6 @@ html, body{
 }
 body{
     margin:0;
-    background: rgb(56,97,156);
-    background: radial-gradient(circle, rgba(56,97,156,1) 0%, rgba(50,69,99,1) 63%, rgba(44,45,50,1) 100%);
     text-align: center;
     font-family:sans-serif;
     padding:0 30px
@@ -54,11 +52,15 @@ form{
  }
  .search-bar{
     width:80%;
+    position:relative;
+    z-index:1;
  }
  .submit-button{
     width:15%;
     background:#000;
     color:#FFF;
+    position:relative;
+    z-index:1;
  }
 
 /*
@@ -70,7 +72,7 @@ POST-IT NOTE (IN CSS)
     width:250px;
     height:250px;
     resize: none;
-    background:#F3F19D;
+    background:#ffffff;
     padding:15px;
     border:none;
     position: absolute;
@@ -79,4 +81,54 @@ POST-IT NOTE (IN CSS)
     font-family:sans-serif;
     opacity:0;
    }
-   
+/*
+=================================================
+BOOKMARKS
+=================================================
+*/
+.bookmarks{
+    position:relative;
+    z-index:1;
+}
+.bookmarks a{
+    text-decoration: none;
+ }
+ .bookmarks{
+    padding:30px;
+    clear:both;
+ }
+ .bookmarks i{
+    font-size:42px;
+    margin:0 20px;
+    color:#FFF;
+    transition:.15s;
+    vertical-align: top;
+ }
+ .bookmarks i:hover{
+    font-size:72px;
+    position:relative;
+ }
+ /*
+=================================================
+POST-IT NOTE (IN CSS)
+=================================================
+*/
+#calc{
+    opacity: 0;
+}
+/*
+=================================================
+Embers
+=================================================
+*/
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+}
+canvas {
+  display: block;
+  position:absolute;
+  z-index:0;
+}

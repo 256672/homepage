@@ -13,9 +13,16 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body onload="startTime(9)">
+        <canvas id="embersCanvas"></canvas>
+
+        <a class="weatherwidget-io" href="https://forecast7.com/en/42d07n87d79/glenview/" data-label_1="GLENVIEW" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="dark" >GLENVIEW WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -27,10 +34,22 @@
             <input type="text" name="q" placeholder="search..." class="search-bar"/>
             <input type="submit" value="GO" class="submit-button">
         </form>
+        <section class="bookmarks">
+            <a href="https://mail.google.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+            </a>
+            <i class="fas fa-sticky-note" onclick="showNote()"></i>
+            <i class="fas fa-calculator" onclick="showCalculator()"></i>
+        </section>
         
         <!-- POST IT NOTE -->   
         <textarea placeholder="Write a note..." id="note" class="" onkeyup="autoSave()">
         </textarea>
+       
+        <!-- calculator --> 
+        <iframe id="calc" width="219" height="302" src="http://calculator-1.com/outdoor/?f=000000&r=ffffff" scrolling="no" frameborder="0"></iframe><br />
+
+        
  
  
         <div id="clock"></div>
