@@ -10,13 +10,19 @@ body{
     font-family:sans-serif;
     padding:0 30px
 }
-h1{
-    margin-top:100px;
-    margin-bottom:25px;
-    font-size:150px;
-    font-family:'Chonburi', sans-serif;
-    color:white;
-
+h1 {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    font-size: 13em;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #ff1a4b, #8b0000);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 a{
     text-decoration: none;
@@ -36,20 +42,28 @@ body{
 SEARCH
 =================================================
 */
-form{
-    width:100%;
-    max-width:600px;
-    margin:0 auto;
- }
- input{
-    width:100%;
-    font-size:32px;
-    margin:5px 0;
-    border:none;
-    padding:10px;
-    outline:none;
-    display:inline-block;
- }
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 80%;
+    font-size: 18px;
+    padding: 12px 15px;
+    border: 2px solid #D2042D; /* Cherry red border */
+    border-radius: 25px;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
  .search-bar{
     width:80%;
     position:relative;
@@ -62,6 +76,17 @@ form{
     position:relative;
     z-index:1;
  }
+
+ .search-bar, .submit-button {
+    border: 7px solid #d2042da8;
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease-in-out, border 0.2s ease;
+}
+
+ .search-bar:focus, .submit-button:hover {
+    box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+    border: 2px solid #fff;
+}
 
 /*
 =================================================
@@ -86,35 +111,44 @@ POST-IT NOTE (IN CSS)
 BOOKMARKS
 =================================================
 */
-.bookmarks{
-    position:relative;
-    z-index:1;
+.bookmarks {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
 }
-.bookmarks a{
+
+.bookmarks a {
     text-decoration: none;
- }
- .bookmarks{
-    padding:30px;
-    clear:both;
- }
- .bookmarks i{
-    font-size:42px;
-    margin:0 20px;
-    color:#FFF;
-    transition:.15s;
+}
+
+.bookmarks {
+    padding: 30px;
+    clear: both;
+}
+
+.bookmarks i {
+    font-size: 75px;
+    margin: 0 20px;
+    color: #fff;
+    transition: .15s;
     vertical-align: top;
- }
- .bookmarks i:hover{
-    font-size:72px;
-    position:relative;
- }
- /*
+}
+
+.bookmarks i:hover {
+    font-size: 72px;
+    position: relative;
+    color: #D2042D; /* Cherry red color on hover */
+}
+/*
 =================================================
-POST-IT NOTE (IN CSS)
+calculator
 =================================================
 */
 #calc{
     opacity: 0;
+    position:absolute;
+    top:150px;
+    right:50px;
 }
 /*
 =================================================
@@ -132,3 +166,20 @@ canvas {
   position:absolute;
   z-index:0;
 }
+/*
+=================================================
+Clock
+=================================================
+*/
+#clock {
+    position: absolute;
+    margin-bottom: 40px; 
+    font-size: 4.5em; 
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 15px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
